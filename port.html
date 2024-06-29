@@ -138,6 +138,53 @@
             margin: 0 10px;
             text-decoration: none;
         }
+        #about {
+            text-align: center;
+        }
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 5px solid #3498db;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #education {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        .education-item {
+            margin-bottom: 30px;
+        }
+        .education-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .education-item .institution {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .education-item .duration {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .education-item ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .education-item li {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -146,6 +193,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#resume">Resume</a></li>
@@ -157,24 +205,53 @@
     <main>
         <section id="home">
             <h1>Riston Rodrigues</h1>
-            <p>Softaware Developer</p>
+            <p>Software Developer</p>
             <p>Passionate about creating beautiful and functional websites and Android Apps.</p>
             <a href="#contact" class="cta-button">Get in Touch</a>
         </section>
 
         <section id="about">
+            <img src="c:\Users\risto\Downloads\mypic.jpeg" alt="Riston Rodrigues" class="profile-picture">
             <h2>About Me</h2>
-            <p>Hello! I'm Riston Rodrigues, a Software developer with a keen eye for design and a passion for creating user-friendly websites and apps.</p>
-            <p>My goal is to blend creativity with functionality to deliver exceptional experiences.</p>
+            <div class="about-content">
+                <p>Hello! I'm Riston Rodrigues, a Software developer with a keen eye for design and a passion for creating user-friendly websites and apps.</p>
+                <p>My goal is to blend creativity with functionality to deliver exceptional experiences.</p>
+                <p>I'm currently studying computer engineering at Vidyavardhini's Bhausaheb Vartak Polytechnic.</p>
+                <p>If you have any questions or would like to work together, feel free to contact me.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Diploma in Computer Engineering</h3>
+                <p class="institution">Vidyavardhini's Bhausaheb Vartak Polytechnic</p>
+                <p class="duration">2022 - Present</p>
+                <ul>
+                    <li>Studying various aspects of computer engineering</li>
+                    <li>Focusing on software development and programming</li>
+                    <li>Participating in college-level technical projects</li>
+                </ul>
+            </div>
+            <div class="education-item">
+                <h3>Secondary School Certificate (SSC)</h3>
+                <p class="institution">St. Ann's High School</p>
+                <p class="duration">Graduated 2022</p>
+                <ul>
+                    <li>Completed secondary education with a focus on sciences and mathematics</li>
+                    <li>Participated in school-level coding competitions</li>
+                    <li>Developed a strong foundation in analytical and problem-solving skills</li>
+                </ul>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Java</li>
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
                 <li>Android development</li>
             </ul>
         </section>
@@ -183,13 +260,43 @@
             <h2>Certificates</h2>
             <div class="certificate">
                 <img src="image.png" alt="Certificate 1">
-                <h3>Azure Ai Fundamentals</h3>
+                <h3>Azure AI Fundamentals</h3>
                 <p>Issued by Microsoft</p>
             </div>
             <div class="certificate">
                 <img src="Screenshot 2024-06-29 161002.png" alt="Certificate 2">
                 <h3>Java programming pt-1</h3>
-                <p>Issued by university of helsinki</p>
+                <p>Issued by University of Helsinki</p>
+            </div>
+            <div class="certificate">
+                <img src="IBmINtrotocloud.png" alt="Certificate 3">
+                <h3>Introduction to Cloud Computing</h3>
+                <p>Issued by CognitiveClass</p>
+            </div>
+            <div class="certificate">
+                <img src="genaimicro.jpeg" alt="Certificate 4">
+                <h3>Generative AI</h3>
+                <p>Issued by Microsoft and LinkedIn</p>
+            </div>
+            <div class="certificate">
+                <img src="Learning Git and GitHub (2021).jpeg" alt="Certificate 5">
+                <h3>Learning Git and GitHub (2021)</h3>
+                <p>Issued by LinkedIn</p>
+            </div>
+            <div class="certificate">
+                <img src="caressmicro.jpeg" alt="Certificate 6">
+                <h3>Career Essentials</h3>
+                <p>Issued by Microsoft and LinkedIn</p>
+            </div>
+            <div class="certificate">
+                <img src="promptenggforevery.png" alt="Certificate 7">
+                <h3>Prompt Engineering for Everyone</h3>
+                <p>Issued by CognitiveClass</p>
+            </div>
+            <div class="certificate">
+                <img src="carressindev.jpeg" alt="Certificate 8">
+                <h3>Career Essentials in Development</h3>
+                <p>Issued by Microsoft and LinkedIn</p>
             </div>
         </section>
 
@@ -220,7 +327,7 @@
         <p>&copy; 2024 Riston Rodrigues. All rights reserved.</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/riston-rodrigues-08a32224b/" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">GitHub</a>
+            <a href="https://github.com/ristonrodrigues723#" target="_blank">GitHub</a>
         </div>
     </footer>
 
