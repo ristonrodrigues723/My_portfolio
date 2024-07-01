@@ -6,7 +6,6 @@ let isDeleting = false;
 
 function typeEffect() {
   const currentWord = words[wordIndex];
-  
   if (isDeleting) {
     text.textContent = currentWord.substring(0, charIndex - 1);
     charIndex--;
@@ -28,3 +27,32 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
+
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode'); 
+}
+
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', toggleDarkMode);
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const skillItems = document.querySelectorAll('#skills ul li');
+  
+  skillItems.forEach(item => {
+      item.addEventListener('mouseover', function() {
+          this.style.animation = 'float 0.5s ease-in-out infinite alternate';
+      });
+      
+      item.addEventListener('mouseout', function() {
+          this.style.animation = 'none';
+      });
+  });
+});
+

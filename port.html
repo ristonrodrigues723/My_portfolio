@@ -81,18 +81,59 @@
         .cta-button:hover, .download-button:hover {
             background-color: #2980b9;
         }
+
         #skills ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        #skills ul li {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 20px;
-        }
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills ul li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+}
+
+#skills ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#skills ul li:hover::before {
+    opacity: 1;
+}
+
+/* HTML logo */
+#skills ul li:nth-child(2)::before {
+    background-image: url('c:\Users\risto\Downloads\html5-logo-1.png');
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0) scale(1.1);
+  }
+  100% {
+      transform: translateY(-10px) scale(1.1);
+  }
+}        
         .certificate {
             background-color: #ecf0f1;
             padding: 20px;
@@ -283,7 +324,90 @@ nav ul li a:hover::before {
 .name {
     color: #551a8b;
 }
+.dark-mode {
+    background-color: #121212;
+     
+}
+.dark-mode p, .dark-mode li {
+  color: #121212;
+}
 
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; 
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white; 
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px); 
+}
+#theme-toggle {
+padding: 10px 20px;
+border-radius: 10px;
+background-color: #333;
+border: none;
+border-color: #555;
+color: #fff;
+font-size: 16px;
+font-family: Arial, sans-serif;
+transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+background-color: #444;
+}
+
+#theme-toggle:active {
+background-color: #555;
+transform: translateY(2px);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border-radius: 10px 20px;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -304,6 +428,8 @@ nav ul li a:hover::before {
             </ul>
         </nav>
     </header>
+   
+
     <div class="intro">
         <br>
         <br>
@@ -311,12 +437,24 @@ nav ul li a:hover::before {
         <h1>Hi, My name is <span class="name">Riston</span> and I am a passionate <span id="changing-text">Programmer</span></h1>
         <div class="buttons">
           <a href="https://www.linkedin.com/in/riston-rodrigues-08a32224b/" class="btn">Linkedin</a>
-          <a href="#" class="btn">Visit Github</a>
+          <a href="https://github.com/ristonrodrigues723" class="btn">Visit Github</a>
         </div>
       </div>    
 
-    <main>
+    <main><div class="fade-animation">  
+
         <section id="home">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dark Mode Toggle</title>
+            
+        </head>
+        <body>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+            
+            <script src="script.js"></script> 
+            
+
             <h1>Riston Rodrigues</h1>
             <p>Software Developer</p>
             <p>Passionate about creating beautiful and functional websites and Android Apps.</p>
@@ -324,7 +462,7 @@ nav ul li a:hover::before {
         </section>
 
         <section id="about">
-            <img src="c:\Users\risto\Downloads\mypic.jpeg" alt="Riston Rodrigues" class="profile-picture">
+            <img src="mypic.jpeg" alt="Riston Rodrigues" class="profile-picture">
             <h2>About Me</h2>
             <div class="about-content">
                 <p>Hello! I'm Riston Rodrigues, a Software developer with a keen eye for design and a passion for creating user-friendly websites and apps.</p>
@@ -455,6 +593,7 @@ nav ul li a:hover::before {
                 <button type="submit">Send</button>
               </form>
         </section>
+</div>
     </main>
 
     <footer>
