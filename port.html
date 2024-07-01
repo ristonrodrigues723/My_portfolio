@@ -255,10 +255,39 @@ nav ul li a:hover {
 nav ul li a:hover::before {
     transform: scaleX(1);
 }
+.intro {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#changing-text {
+  color: #8a2be2;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.name {
+    color: #551a8b;
+}
 
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -271,9 +300,20 @@ nav ul li a:hover::before {
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
                 
+                
             </ul>
         </nav>
     </header>
+    <div class="intro">
+        <br>
+        <br>
+        <br>
+        <h1>Hi, My name is <span class="name">Riston</span> and I am a passionate <span id="changing-text">Programmer</span></h1>
+        <div class="buttons">
+          <a href="https://www.linkedin.com/in/riston-rodrigues-08a32224b/" class="btn">Linkedin</a>
+          <a href="#" class="btn">Visit Github</a>
+        </div>
+      </div>    
 
     <main>
         <section id="home">
@@ -422,7 +462,7 @@ nav ul li a:hover::before {
         </div>
     </footer>
 
-    <script>
-    </script>
+   <script src="port.js"></script>
+    
 </body>
 </html>
