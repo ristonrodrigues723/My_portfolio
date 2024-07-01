@@ -1,6 +1,6 @@
 # My Portfolio
 
-Welcome to my portfolio! This is where I showcase my web development projects.
+Welcome to my portfolio! This is where I showcase my projects , skills and intrests.
 
 ## Project
 -a basic portfolio website created using html,css and javascript
